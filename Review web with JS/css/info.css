@@ -1,0 +1,273 @@
+body{
+    font-family: arial;
+    margin: 0px;
+    padding: 0px;
+  }
+  .logo{
+    width: 90%;
+    height: 130px;
+    margin: 0 auto;
+    background-color: #FFF;
+  }
+  .logo img{
+    width: 100%;
+    height: 120px;
+  }
+  nav{
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #000066;
+    position: sticky;
+    top:0;
+    z-index: 99;
+  }
+  nav > ul{
+    margin: 0px;
+    padding: 0px;
+  }
+  nav li{
+    list-style-type: none;
+    position: relative;
+    transition: .5s;
+  }
+  nav > ul > li{
+    float: left;
+    position: relative;
+  }
+  nav > ul::after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .submenu{
+    display: none;
+  }
+  nav input[type=checkbox]{
+    display: none;
+  }
+  nav label{
+    display: none;
+  }
+  nav a{
+    display: inline-block;
+    text-decoration: none;
+  }
+  nav > ul > li > a{
+    padding: 20px 30px;
+    color: #FFF;
+  }
+  nav > ul li:hover a{
+    padding: 15px 30px 20px 30px;
+  }
+  nav li:hover .submenu{
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding-top: 0px;
+    z-index: 1000;
+    transition: .5s;
+  }
+  .submenu li a{
+    padding: 5px 0px;
+    font-size: 13px;
+    color: white;
+    width: 270px;
+  }
+  .submenu li{
+    border-bottom: 1px solid #CCC;
+  }
+  .menu-html:hover{
+    border-top: 5px solid skyblue;
+    background-color: #000066;
+  }
+  .menu-css:hover{
+    border-top: 5px solid skyblue;
+    background-color: #000066;
+  }
+  .menu-js:hover{
+    border-top: 5px solid skyblue;
+    background-color: #000066;
+  }
+  .menu-contacte:hover{
+    border-top: 5px solid skyblue;
+    background-color: #000066;
+  }
+  .menu-html .submenu{
+    background-color: #000066;
+  }
+  .menu-css .submenu{
+    background-color: #000066;
+  }
+  .menu-js .submenu{
+    background-color: #000066;
+  }
+  .submenu li:hover a{
+    color: #EEE;
+    font-weight: bold;
+  }
+  .menu-html .submenu li:hover{
+    background-color: skyblue;
+  }
+  .menu-css .submenu li:hover{
+    background-color: skyblue;
+  }
+  .menu-js .submenu li:hover{
+    background-color: skyblue;
+  }
+  nav input[type=checkbox]:checked ~ ul{
+    display: block;
+  }
+  .slider{
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: khaki;
+  }
+  .container
+  {
+      width: 90%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: auto minmax(150px, 300px);
+      grid-template-areas: "entete entete"
+                           "principale barre"
+                           "pied pied"
+  }
+  header
+  {
+      grid-area: entete;
+  }
+  .slides
+  {
+     /* background-color: #9e7878;
+      width: 100%;
+      max-height: 500px;*/
+  }
+  
+  section,aside
+  {
+      padding: 20px;
+  }
+  section
+  {
+      background-color:white;
+      grid-area: principale;
+      color: #000066;
+  }
+  section .taarifs
+  {
+    width: 100%;
+    height: auto;
+    background-color: skyblue;
+  }
+  section .acces
+  {
+    width: 100%;
+    height: auto;
+    background-color: #9e7878;
+  }
+  section .Contact
+  {
+    width: 100%;
+    height: auto;
+    background-color: aquamarine;
+  }
+  aside
+  {
+      background-color: #308ce8;
+      grid-area: barre;
+      color: darkblue
+  }
+  aside h2
+  {
+    color: white;
+    background-color: #000066;
+    border-radius: 10px;
+  }
+  aside li
+  {
+    list-style: none;
+    margin: 10px 0px;
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px 20px;
+    color: #308ce8;
+    border: 1px solid white;
+    border-radius: 50%;
+    transition: .5s;
+  }
+  aside li:hover
+  {
+    color: #000066;
+    border: 1px solid #000066;
+    transition: .5s;
+  }
+  aside h4 {
+    color: white;
+    margin: 20px;
+    font-size: 20px;
+    transition: .5s;
+  }
+  aside h4:hover {
+    color: #000066;
+    transition: .5s;
+  }
+  footer
+  {
+      grid-area: pied;
+  }
+  .pieto{
+    background-color: #000066;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    color: white;
+  }
+  .pieto p{
+    margin-left: 40%;
+  }
+  
+  @media screen and (max-width:800px)
+  {
+      .container
+      {
+          grid-template-columns: 1fr;
+          grid-template-areas: "entete"
+                               "principale"
+                               "barre"
+                               "pied";
+      }
+  }
+  @media screen and (max-width: 1124px)
+  {
+    .menu-mobile
+    {
+      display: block;
+      color: #FFF;
+      background-color: skyblue;
+      text-align: center;
+      padding: 12px 0px;
+    }
+    nav ul
+    {
+      display: none;
+    }
+    nav ul li, nav ul li a
+    {
+      width: 100%;
+      text-align: center;
+    }
+    nav ul li a, nav ul li:hover a
+    {
+      padding: 10px 0px;
+    }
+    nav li:hover .submenu
+    {
+      display: block;
+      position: static;
+    }
+  }
+  
